@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegúrate de que el contenido principal tenga un fondo blanco */
+main {
+  background-color: white;
+  flex-grow: 1;
+}
+
+/* Añade una transición suave para el contenido principal */
+.page-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilo para el estado de carga */
+.loading {
+  opacity: 0;
+}
+
+/* Estilo para el contenido cargado */
+.loaded {
+  opacity: 1;
+}
+
+/* Estilos para el CartDrawer */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
